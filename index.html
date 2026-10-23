@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <title>District Cricket League 2026–27 | Player Registration</title>
+  <meta name="description" content="District Cricket League 2026–27 — SDCA District player registration portal.">
+  <style>
+    :root{--bg:#0b0c0e;--panel:#151619;--panel2:#1d1e22;--gold:#d8ad55;--gold2:#f2d18a;--muted:#a6a7ad;--line:#34353a;--white:#f8f7f3}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+    a{color:inherit}
+    .affiliation{background:#211b11;color:var(--gold2);text-align:center;padding:10px 14px;font-size:.74rem;font-weight:850;letter-spacing:.12em;border-bottom:1px solid #6e592f}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px clamp(18px,5vw,70px);border-bottom:1px solid #292a2d;background:#0d0e10}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:.08em;font-size:.85rem}
+    .crest{width:39px;height:43px;border:1.5px solid var(--gold);clip-path:polygon(8% 0,92% 0,87% 70%,50% 100%,13% 70%);display:grid;place-items:center;color:var(--gold);font-weight:900}
+    .season{color:var(--gold2);font-size:.75rem;letter-spacing:.14em;white-space:nowrap}
+    .hero{position:relative;overflow:hidden;min-height:530px;display:flex;align-items:center;padding:70px clamp(20px,8vw,110px);background:radial-gradient(ellipse at 78% 35%,#4d3b1b 0%,#211b11 20%,#101113 52%,#0b0c0e 75%)}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,12,14,.98) 0%,rgba(11,12,14,.88) 46%,rgba(11,12,14,.15) 100%),repeating-linear-gradient(115deg,transparent 0 70px,rgba(255,255,255,.025) 71px 72px);pointer-events:none}
+    .hero:after{content:"";position:absolute;width:360px;height:360px;right:7%;top:14%;border:1px solid rgba(216,173,85,.22);border-radius:50%;box-shadow:0 0 0 28px rgba(216,173,85,.035),0 0 0 70px rgba(216,173,85,.025)}
+    .hero-content{position:relative;z-index:1;max-width:760px}
+    .eyebrow{color:var(--gold2);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800}
+    h1{font-size:clamp(2.7rem,7vw,5.8rem);line-height:.99;letter-spacing:-.055em;margin:18px 0 20px;font-weight:950}
+    h1 span{display:block;color:var(--gold)}
+    .hero p{color:#d1d0ca;max-width:570px;font-size:1.05rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:14px 20px;border-radius:7px;text-decoration:none;font-weight:800;border:1px solid var(--gold);cursor:pointer;font-size:.95rem}
+    .btn-gold{background:var(--gold);color:#14120d}
+    .btn-outline{background:transparent;color:var(--gold2)}
+    .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .fact{padding:25px clamp(15px,4vw,48px);background:#121315}
+    .fact strong{display:block;font-size:clamp(1.15rem,2.5vw,1.65rem);color:var(--gold2)}
+    .fact small{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:.7rem}
+    .section{padding:65px clamp(18px,6vw,78px)}
+    .section-head{max-width:720px;margin-bottom:28px}
+    .section-head h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin:9px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.75fr);gap:24px;align-items:start}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,30px)}
+    .card h3{margin:0 0 6px;font-size:1.25rem}
+    .sub{color:var(--muted);font-size:.9rem;margin:0 0 22px}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .field{display:flex;flex-direction:column;gap:7px}
+    .full{grid-column:1/-1}
+    label{font-size:.86rem;font-weight:700;color:#e9e7e0}
+    input,select,textarea{width:100%;font:inherit;color:var(--white);background:#0f1012;border:1px solid #414247;border-radius:7px;padding:12px 13px;min-height:46px}
+    input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+    select option{background:#151619}
+    .hint{color:var(--muted);font-size:.78rem}
+    .checkrow{display:flex;align-items:flex-start;gap:10px;color:#c9c8c3;font-size:.82rem}
+    .checkrow input{width:17px;min-height:17px;margin-top:3px;accent-color:var(--gold)}
+    .submit{grid-column:1/-1;width:100%;border:0;margin-top:3px}
+    .notice{display:none;border:1px solid #8b7139;background:#292214;color:#f2d18a;padding:13px;border-radius:8px;font-size:.88rem}
+    .notice.show{display:block}
+    .side-card{background:linear-gradient(155deg,#282114,#171719 62%);border:1px solid #6e592f}
+    .price{font-size:2.4rem;line-height:1.1;color:var(--gold2);font-weight:900;margin:15px 0 4px}
+    .price-note{color:#bdb8aa;font-size:.8rem}
+    .included{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:13px}
+    .included li{display:flex;gap:10px;color:#e3e0d7;font-size:.91rem}
+    .tick{color:var(--gold);font-weight:900}
+    .warning{margin-top:20px;padding:13px;border-left:3px solid var(--gold);background:#111214;color:#c6c3ba;font-size:.8rem}
+    .qr-panel{margin-top:22px;padding-top:20px;border-top:1px solid #6e592f}
+    .qr-panel h3{margin:8px 0 14px}
+    .qr-image-wrap{background:#f6f4ed;border-radius:10px;padding:12px;border:1px solid #9d7b36;display:flex;justify-content:center}
+    .qr-image{display:block;width:100%;max-width:340px;height:auto;object-fit:contain;border-radius:6px}
+    .footer{border-top:1px solid var(--line);padding:24px clamp(18px,6vw,78px);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:.8rem}
+    .footer strong{color:var(--gold2)}
+    @media(max-width:760px){.hero{min-height:470px}.hero:after{right:-190px;top:25%}.facts{grid-template-columns:1fr}.fact{padding:16px 22px}.layout{grid-template-columns:1fr}.section{padding-top:46px;padding-bottom:46px}}
+    @media(max-width:480px){.topbar{padding:14px 16px}.brand{font-size:.72rem}.season{font-size:.65rem}.hero{padding:58px 20px}form{grid-template-columns:1fr}.full,.submit{grid-column:1}.btn{width:100%}.hero p{font-size:.97rem}}
+  </style>
+</head>
+<body>
+  <div class="affiliation">AFFILIATED BY JHARKHAND STATE CRICKET ASSOCIATION</div>
+  <header class="topbar">
+    <div class="brand"><div class="crest">DCL</div><div>DISTRICT<br>CRICKET LEAGUE</div></div>
+    <div class="season">SEASON 2026–27</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">SDCA District · Player Registration</div>
+        <h1>YOUR GAME.<span>YOUR MOMENT.</span></h1>
+        <p>Step onto the stage. Register your interest for District Cricket League 2026–27 and submit your player details through the registration portal.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#register">PLAYER REGISTRATION ↗</a>
+          <a class="btn btn-outline" href="#details">LEAGUE DETAILS</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts" id="details" aria-label="League details">
+      <div class="fact"><strong>2026–27</strong><small>Season</small></div>
+      <div class="fact"><strong>SDCA District</strong><small>Registration district</small></div>
+      <div class="fact"><strong>Player Portal</strong><small>Registration type</small></div>
+    </section>
+
+    <section class="section" id="register">
+      <div class="section-head">
+        <div class="eyebrow">Join the league</div>
+        <h2>Player Registration</h2>
+        <p>Fill in your details carefully. The organizers should confirm eligibility, documents and payment instructions before registration is considered complete.</p>
+      </div>
+      <div class="layout">
+        <div class="card">
+          <h3>Player information</h3>
+          <p class="sub">Fields marked * are required.</p>
+          <div id="demoNotice" class="notice" role="status" aria-live="polite"></div>
+          <form id="registrationForm">
+            <div class="field full"><label for="fullName">Full name *</label><input id="fullName" name="fullName" autocomplete="name" required maxlength="100" placeholder="Enter player's full name"></div>
+            <div class="field"><label for="dob">Date of birth *</label><input id="dob" name="dob" type="date" required></div>
+            <div class="field"><label for="phone">Mobile number *</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required pattern="[0-9+\-\s()]{8,18}" placeholder="Contact number"></div>
+            <div class="field"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com"></div>
+            <div class="field"><label for="role">Playing role *</label><select id="role" name="role" required><option value="">Select role</option><option>Batter</option><option>Bowler</option><option>All-rounder</option><option>Wicketkeeper</option></select></div>
+            <div class="field"><label for="batting">Batting style *</label><select id="batting" name="batting" required><option value="">Select style</option><option>Right-hand bat</option><option>Left-hand bat</option></select></div>
+            <div class="field"><label for="bowling">Bowling style</label><select id="bowling" name="bowling"><option value="">Select if applicable</option><option>Right-arm fast</option><option>Left-arm fast</option><option>Right-arm medium</option><option>Left-arm medium</option><option>Right-arm spin</option><option>Left-arm spin</option><option>Not applicable</option><option>Other</option></select></div>
+            <div class="field full"><label for="address">Town / district *</label><input id="address" name="address" required maxlength="180" placeholder="Town or area (do not enter a full home address)"></div>
+            <div class="field full"><label for="experience">Previous team / cricket experience (optional)</label><textarea id="experience" name="experience" rows="3" maxlength="500" placeholder="Club, school, academy or playing experience"></textarea></div>
+            <div class="field full">
+              <label class="checkrow"><input id="consent" type="checkbox" required><span>I confirm these details are accurate and understand that submitting this demo form does not complete registration or payment.</span></label>
+            </div>
+            <button class="btn btn-gold submit" type="submit">PREVIEW SUBMISSION</button>
+            <div class="hint full">Demo preview only: this starter page does not transmit or save personal details.</div>
+          </form>
+        </div>
+
+        <aside class="card side-card">
+          <div class="eyebrow">Registration information</div>
+          <h3>League registration fee</h3>
+          <div class="price">₹10,000</div>
+          <div class="price-note">Per player · As specified by organizer</div>
+          <ul class="included">
+            <li><span class="tick">✓</span><span>Season: 2026–27</span></li>
+            <li><span class="tick">✓</span><span>Registration for players</span></li>
+            <li><span class="tick">✓</span><span>District: SDCA District</span></li>
+            <li><span class="tick">✓</span><span>Contact details for organizer to be added</span></li>
+          </ul>
+          <div class="warning"><strong>Before publishing:</strong> Confirm the ₹10,000 fee, SDCA's full official name and any claimed JSCA affiliation with the authorized organizers. Do not collect payments using this demo page.</div>
+          <div class="qr-panel">
+            <div class="eyebrow">Payment QR</div>
+            <h3>Scan to Pay</h3>
+            <div class="qr-image-wrap">
+              <img class="qr-image" src="payment-qr.jpeg" alt="UPI payment QR code provided by the organizer">
+            </div>
+            <p class="price-note">Amount: ₹10,000 per player. Before paying, scan and verify the payee name and amount in your UPI app.</p>
+            <p class="hint">Payments are not connected or verified by this demo website. Organizer must verify each payment manually unless a payment gateway is integrated.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><strong>DCL 2026–27</strong> · District Cricket League</div>
+    <div>Starter design · Replace placeholder details before launch</div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('registrationForm');
+    const notice = document.getElementById('demoNotice');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const name = document.getElementById('fullName').value.trim();
+      notice.textContent = `Demo preview for ${name}: the form looks complete, but no information has been sent or saved. Connect a Google Form or secure backend before accepting real registrations.`;
+      notice.classList.add('show');
+      notice.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+  </script>
+</body>
+</html>
